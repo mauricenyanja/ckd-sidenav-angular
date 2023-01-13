@@ -10,10 +10,12 @@ export class PortalComponent  implements OnInit ,AfterViewInit{
 
   @ViewChild('templatePortalContent')
   templatePortalContent!: TemplateRef<unknown>;
+  @ViewChild('domPortalContent') domPortalContent: ElementRef<HTMLElement> | undefined;
 
   selectedPortal!: Portal<any>;
   componentPortal!: ComponentPortal<PortalComponent>;
   templatePortal!: TemplatePortal<any>;
+  domPortal!:DomPortal<any>
 
   constructor(private _viewContainerRef:ViewContainerRef) { }
 
@@ -23,6 +25,7 @@ export class PortalComponent  implements OnInit ,AfterViewInit{
   ngAfterViewInit(){
     this.componentPortal = new ComponentPortal(PortalComponent);
     this.templatePortal = new TemplatePortal(this.templatePortalContent, this._viewContainerRef);
+    this.domPortal = new DomPortal(this.domPortalContent);
   }
 
 }

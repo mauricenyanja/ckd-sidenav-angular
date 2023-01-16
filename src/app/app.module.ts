@@ -10,11 +10,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { PortalComponent } from './components/cdk/portal/portal.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { TrialComponent } from './components/trial/trial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortalComponent
+    PortalComponent,
+    SidenavComponent,
+    TrialComponent
   ],
   imports: [
     BrowserModule,

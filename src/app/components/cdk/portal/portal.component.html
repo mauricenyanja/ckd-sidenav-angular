@@ -1,3 +1,33 @@
+
+
+
+
+<!-- 
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav #sidenav [mode]="mode.value || 'push'">
+    <p><button mat-button (click)="sidenav.toggle()">CLose</button></p>
+    <p>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+      </mat-radio-group>
+    </p>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.toggle()">Edit</button></p>
+    <p>
+      <mat-radio-group class="example-radio-group" [formControl]="mode">
+
+      </mat-radio-group>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+
+
+
+
+
 <h2>The portal outlet is below:</h2>
 <div class="example-portal-outlet">
   <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
@@ -9,3 +39,5 @@
 <button (click)="selectedPortal = domPortal">Render DOM portal</button>
 
 <div #domPortalContent>Hello, this is a DOM portal</div>
+
+<button>Apply</button>
